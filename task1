@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <ctype.h>
+int main()
+{
+    char questions[][100]={"1.Highest Economy country in Europe?",
+                         "2.What does mean Deutschland?",
+                         "3.Which country is best for tourism?"};
+    char options[][100]={"A.India","B.America","C.Germany","D.Norway",
+                         "A.Germany","B.Poland","C.Paris","D.Italy",
+                         "A.China","B.Africa","C.Switzerland","D.Malaysia"};
+    char answers[]={'C','A','C'};
+    int numberofquestions=sizeof(questions)/sizeof(questions[0]);
+    
+    char answer;
+    int score=0;
+    printf("QUIZ GAME\n");
+    
+    for(int i=0;i<numberofquestions;i++)
+    {
+        printf("***********\n");
+        printf("%s\n",questions[i]);
+        printf("***********\n");
+        for(int j=(i *4);j<(i*4)+4;j++)
+        {
+            printf("%s\n",options[j]);
+        }
+        printf("Answer:");
+        scanf("%c",&answer);
+        scanf("%c");
+        answer=toupper(answer);
+    
+        if(answer==answers[i])
+        {
+         printf("GREAT THAT'S A CORRECT ANSWER\n");
+         score++;
+        }
+        else
+        {
+         printf("NO THAT'S WRONG ANSWER\n");
+        }
+    }
+    printf("***********\n");
+    printf("FINAL SCORE:%d/%d\n",score,numberofquestions);
+    printf("***********\n");
+
+    return 0;
+}

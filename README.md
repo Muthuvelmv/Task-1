@@ -2,7 +2,7 @@
 **Company:** CODTECH IT SOLUTIONS
 **ID:** CT4CP5323
 **Domain:** C PROGRAMMING
-**Duration:** July to August 202
+**Duration:** July to August 2024
 
 
 ##Over view of the Project
